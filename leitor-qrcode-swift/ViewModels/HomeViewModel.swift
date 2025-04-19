@@ -10,4 +10,5 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     @Published var showScanner: Bool = false
+    @Published var qrCodeText: String?
 }

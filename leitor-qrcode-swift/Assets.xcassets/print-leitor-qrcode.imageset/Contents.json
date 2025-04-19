@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "print-leitor-qrcode.PNG",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

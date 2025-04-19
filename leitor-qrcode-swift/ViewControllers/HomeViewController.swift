@@ -15,24 +15,35 @@ struct HomeViewController: View {
         ZStack {
             Color.black.ignoresSafeArea()
             
-            VStack {
-                Button(action: {
-                    self.viewModel.showScanner = true
-                }) {
-                    VStack {
-                        Image(systemName: "qrcode.viewfinder")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                            .foregroundColor(.white)
-                            .padding()
-                        
-                        Text("Escanear QR Code")
-                            .font(.headline)
-                            .foregroundColor(.white)
+            if viewModel.showScanner {
+                QRScannerViewController(isPresented: $viewModel.showScanner, result: $viewModel.qrCodeText)
+            } else {
+                VStack {
+                    Button(action: {
+                        self.viewModel.showScanner = true
+                    }) {
+                        VStack {
+                            Image(systemName: "qrcode.viewfinder")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .foregroundColor(.white)
+                                .padding()
+                            
+                            Text("Escanear QR Code")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(20)
                     }
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(20)
+                    
+                    if viewModel.qrCodeText != nil {
+                        Text("Texto do QR Code: \(viewModel.qrCodeText ?? "")")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .padding(.top, 20)
+                    }
                 }
             }
         }
