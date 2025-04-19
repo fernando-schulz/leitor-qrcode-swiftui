@@ -21,6 +21,8 @@ Este projeto **não possui dependências externas**. Basta rodar o projeto diret
 
 ## 📸 Imagens
 
+No GIF a seguir, no primeiro QR Code é lido apenas um texto "Desenvolvido por Fernando Schulz" na qual é exibibido na tela principal logo abaixo do botão para efetuar as leituras. No segundo QR Code é lida uma URL do github, projetos do usuário fernando-schulz
+
 <p align="center">
   <img src="leitor-qrcode-swift/Assets.xcassets/app-leitor-qrcode.dataset/app-leitor-qrcode.gif" alt="GIF do App" width="300" style="margin-right: 20px;"/>
   <img src="leitor-qrcode-swift/Assets.xcassets/print-leitor-qrcode.imageset/print-leitor-qrcode.PNG" alt="Print tela principal" width="300"/>
