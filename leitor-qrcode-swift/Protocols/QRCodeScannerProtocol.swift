@@ -9,5 +9,5 @@ import Foundation
 
 protocol QRCodeScannerProtocol: AnyObject {
     func didFind(code: String)
-    func didUpdateQRFrame(frame: CGRect)
+    //func didUpdateQRFrame(frame: CGRect)
 }

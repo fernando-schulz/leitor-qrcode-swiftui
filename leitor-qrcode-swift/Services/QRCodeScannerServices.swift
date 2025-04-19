@@ -44,10 +44,10 @@ class QRCodeScannerServices: UIViewController, AVCaptureMetadataOutputObjectsDel
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject else { return }
         guard let stringValue = metadataObject.stringValue else { return }
-        guard let transformed = previewLayer.transformedMetadataObject(for: metadataObject) as? AVMetadataMachineReadableCodeObject else { return }
         
-        delegate?.didFind(code: stringValue)
-        delegate?.didUpdateQRFrame(frame: transformed.bounds)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.delegate?.didFind(code: stringValue)
+        }
     }
     
     override func viewDidLayoutSubviews() {
