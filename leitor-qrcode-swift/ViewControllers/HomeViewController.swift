@@ -16,7 +16,7 @@ struct HomeViewController: View {
             Color.black.ignoresSafeArea()
             
             if viewModel.showScanner {
-                QRScannerViewController()
+                QRScannerViewController(isPresented: $viewModel.showScanner, result: $viewModel.qrCodeText)
             } else {
                 VStack {
                     Button(action: {
@@ -36,6 +36,13 @@ struct HomeViewController: View {
                         .padding()
                         .background(Color.blue)
                         .cornerRadius(20)
+                    }
+                    
+                    if viewModel.qrCodeText != nil {
+                        Text("Texto do QR Code: \(viewModel.qrCodeText ?? "")")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                            .padding(.top, 20)
                     }
                 }
             }
