@@ -10,7 +10,6 @@ import SwiftUI
 struct CameraPreviewServices: UIViewControllerRepresentable {
     
     @Binding var scannedCode: String?
-    //@Binding var qrFrame: CGRect
     
     func makeUIViewController(context: Context) -> QRCodeScannerServices {
         let vc = QRCodeScannerServices()
@@ -35,11 +34,5 @@ struct CameraPreviewServices: UIViewControllerRepresentable {
         func didFind(code: String) {
             parent.scannedCode = code
         }
-        
-        /*func didUpdateQRFrame(frame: CGRect) {
-            DispatchQueue.main.async {
-                self.parent.qrFrame = frame
-            }
-        }*/
     }
 }

@@ -10,23 +10,13 @@ import SwiftUI
 struct QRScannerViewController: View {
     
     @State private var scannedCode: String?
-    //@State private var qrFrame: CGRect = .zero
     @Binding var isPresented: Bool
     @Binding var result: String?
     
     var body: some View {
         ZStack {
-            //CameraPreviewServices(scannedCode: $scannedCode, qrFrame: $qrFrame)
             CameraPreviewServices(scannedCode: $scannedCode)
                 .edgesIgnoringSafeArea(.all)
-            
-            /*if let frame = qrFrame.isEmpty ? nil : qrFrame {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.green, lineWidth: 3)
-                    .frame(width: frame.width, height: frame.height)
-                    .position(x: frame.midX, y: frame.midY)
-                    .animation(.easeInOut, value: frame)
-            }*/
             
             VStack {
                 HStack {
