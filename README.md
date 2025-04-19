@@ -22,8 +22,8 @@ Este projeto **não possui dependências externas**. Basta rodar o projeto diret
 ## 📸 Imagens
 
 <p align="center">
-  <img src="leitor-qrcode-swiftui/Assets.xcassets/app-leitor-qrcode.dataset/app-leitor-qrcode.gif" alt="GIF do App" width="300" style="margin-right: 20px;"/>
-  <img src="leitor-qrcode-swiftui/Assets.xcassets/print-leitor-qrcode.imageset/print-leitor-qrcode.PNG" alt="Print tela principal" width="300"/>
+  <img src="leitor-qrcode-swift/Assets.xcassets/app-leitor-qrcode.dataset/app-leitor-qrcode.gif" alt="GIF do App" width="300" style="margin-right: 20px;"/>
+  <img src="leitor-qrcode-swift/Assets.xcassets/print-leitor-qrcode.imageset/print-leitor-qrcode.PNG" alt="Print tela principal" width="300"/>
 </p>
 
 ## 🚀 Como Rodar o Projeto
